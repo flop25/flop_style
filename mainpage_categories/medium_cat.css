@@ -1,0 +1,68 @@
+/*catégories*/
+
+
+#content ul.thumbnailCategories li {
+	width:160px;
+	height:205px;
+	margin: 5px;
+	padding: 5px;
+}
+
+#content div.thumbnailCategory {
+	text-align:center;
+	width:100%;
+	height:100%;
+	margin: 0;
+	padding: 0;
+	vertical-align:middle;
+}
+
+#content div.thumbnailCategory div.illustration  {
+	width:auto;
+	height:auto;
+/*height:135px;*/
+	text-align:center;
+	overflow: inherit;
+	float:none;
+	margin: 0;
+	padding: 0;
+}
+#content div.thumbnailCategory div.description {
+	width:auto;
+	height:auto;
+	text-align:center;
+	overflow:inherit;
+    float:none;
+    overflow: auto;
+
+}
+/* --------------Hack-------------*/
+#content div.thumbnailCategory {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	width:160px;
+	height:205px;
+}
+#content div.thumbnailCategory * {
+	vertical-align: middle;
+}
+/*\*//*/
+.wraptocenter {
+    display: block;
+}
+.wraptocenter span {
+    display: inline-block;
+    height: 100%;
+    width: 1px;
+}
+/**/
+/* --------------fin Hack-------------*/
+
+#content div.thumbnailCategory div.description h3 {
+text-align:center;
+}
+
+.content div.thumbnailCategory {
+/*background-image:none;*/
+}

@@ -1,0 +1,105 @@
+.thumbnailCategories {
+	padding-left:auto;
+	padding-right:auto;
+	width:auto;
+	padding: 5px;
+	list-style: none outside none;
+	text-align: center;
+}
+.thumbnailCategories li {
+	width: auto;
+	float: left;
+	display:inline;
+	text-align:center;
+}
+.wrap1 {
+	display: inline-block;
+	margin: 0 7px 5px;
+	text-align: center;
+	vertical-align: top;
+}
+.albumHolder {
+	float: left;
+	margin: 15px 22px 15px 0;
+	position: relative;
+	width: 170px;
+}
+.picRotated {
+	background: url("img/album_front_bg.png") no-repeat scroll 0 0 transparent;
+	height: 138px;
+	left: -4px;
+	position: absolute;
+	top: -4px;
+	width: 178px;
+	z-index: 1;
+	margin: 0;
+	padding: 0;
+}
+.album {
+	-moz-box-shadow: 0 0 2px black;
+	background-color: #F5F5F5;
+	border: 1px solid white;
+	padding: 4px;
+	position: relative;
+	text-decoration: none;
+	z-index: 10;
+	margin: 0;
+}
+.albumTitle {
+	-moz-border-radius: 10px 10px 10px 10px;
+	border-bottom-left-radius:10px 10px;
+	border-bottom-right-radius:10px 10px;
+	border-top-left-radius:10px 10px;
+	border-top-right-radius:10px 10px;
+}
+.albumTitle {
+	-webkit-box-shadow:black 0 0 4px;
+	background-color:#3C3C3C;
+	box-shadow:black 0 0 4px;
+	color: #DDDDDD;
+	font-size: 0.825em;
+	margin: 10px auto 0;
+	overflow: hidden;
+	padding: 4px 6px;
+	text-align: center;
+	text-shadow: 0 0 1px black;
+	white-space: nowrap;
+	width: 120px;
+}
+.highlight {
+	background: url("img/pic_highlight.png") no-repeat scroll left top transparent;
+	display: block;
+	height: 100px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100px;
+	z-index: 10;
+	margin: 0;
+	padding: 0;
+}
+.album img {
+	position: relative;
+	z-index: 1;
+}
+.album img, .pic img {
+	display: block;
+}
+a img {
+	border: medium none;
+}
+.albumCnt {
+	-moz-border-radius: 5px 5px 5px 5px;
+	background-color: #F5F5F5;
+	color: #808080;
+	font-size: 10px;
+	line-height: 1.25em;
+	padding: 5px 10px 3px;
+	position: absolute;
+	right: 10px;
+	top: 0;
+	z-index: 20;
+}
+.clear {
+	clear: both;
+}

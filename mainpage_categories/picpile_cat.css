@@ -1,14 +1,15 @@
+.content .thumbnailCategories li, .content .thumbnailCategories li:hover {    background: none;
+}
 .thumbnailCategories {
 	padding-left:auto;
 	padding-right:auto;
-	width:auto;
 	padding: 5px;
 	list-style: none outside none;
 	text-align: center;
 }
 .thumbnailCategories li {
 	width: auto;
-	float: left;
+	float: none;
 	display:inline;
 	text-align:center;
 }

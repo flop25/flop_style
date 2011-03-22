@@ -2,9 +2,9 @@
 #content .thumbnailCategories {
 	padding-left:auto;
 	padding-right:auto;
-	padding: 5px;
 	list-style: none outside none;
 	text-align: center;
+	background-image:none;
 }
 #content .thumbnailCategories li {
 	width: auto;
@@ -14,53 +14,56 @@
 	margin-left:10px;
 	margin: 5px;
 	padding: 5px;
+	background-image:none;
 }
-
-
-#content div.thumbnailCategory {
-	text-align:center;
-	width:100%;
-	height:100%;
-	margin: 0 auto;
-	padding: 0;
-	vertical-align:middle;
+#content .thumbnailCategories li:hover {
+	background-image:none;
 }
-
-#content div.thumbnailCategory div.illustration  {
+#content div.thumbnailCategory div.illustration {
 	width:auto;
 	height:auto;
-/*height:135px;*/
+	/*height:135px;*/
 	text-align:center;
 	overflow: inherit;
 	float:none;
 	margin: 0;
 	padding: 0;
+	background-image:none;
 }
 #content div.thumbnailCategory div.description {
 	width:auto;
 	height:auto;
 	text-align:center;
 	overflow:inherit;
-    float:none;
-    overflow: auto;
-
+	float:none;
+	overflow: auto;
+	background-image:none;
+}
+.description img {
+	float:right;
+}
+#content div.thumbnailCategory div.description p {
+	text-align: center;
 }
 /* --------------Hack-------------*/
 #content div.thumbnailCategory {
-	display: table-cell;
-	text-align: center;
+	display: inline-block;
+	margin: 5px auto;
+	padding:5px;
 	vertical-align: middle;
 	width:160px;
 	height:205px;
+	text-align: center;
+	background-image:none;
 }
 #content div.thumbnailCategory * {
 	vertical-align: middle;
 }
 /*\*//*/
-.wraptocenter {
+#content div.thumbnailCategory {
     display: block;
 }
-.wraptocenter span {
+#content div.thumbnailCategory span {
     display: inline-block;
     height: 100%;
     width: 1px;
@@ -69,9 +72,8 @@
 /* --------------fin Hack-------------*/
 
 #content div.thumbnailCategory div.description h3 {
-text-align:center;
+	text-align:center;
 }
-
 #content div.thumbnailCategory div.illustration img {
-    height: 96px;
+	height: 96px;
 }

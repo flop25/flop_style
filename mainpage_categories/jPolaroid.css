@@ -1,0 +1,22 @@
+/* from http://steveram.info/jpolaroid/ thx ! */
+ul.jpolaroid {
+	list-style: none;
+	overflow: visible;
+	width: 100%;
+	padding-top: 20px;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+	margin:auto;
+	text-align:center;
+}
+ul.jpolaroid li {
+	display: inline;
+}
+ul.jpolaroid a {
+	display: inline;
+	text-align: center;
+	text-decoration: none;
+	width: auto;
+	border:none;
+}

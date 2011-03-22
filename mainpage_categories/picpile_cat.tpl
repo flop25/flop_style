@@ -1,9 +1,13 @@
 {combine_css path="template-extension/flop_style/mainpage_categories/picpile_cat.css"}
 {if $themeconf.name == "Sylvia"}
 {html_head}
-  {literal}#theCategoryPage .content {
+  {literal}
+  <style>
+  #theCategoryPage .content {
       margin: 21px 10px 0 290px !important;
-  }{/literal}
+  }
+	</style>
+  {/literal}
 {/html_head}
 {/if}
 <ul class="thumbnailCategories">

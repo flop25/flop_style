@@ -1,0 +1,109 @@
+/* caption styling */
+
+.caption-top, .caption-bottom {
+	color: #ffffff;	
+	padding: 1.2em;	
+	font-weight: bold;
+	font-size: 13px;	
+	font-family: arial;	
+	cursor: default;
+	background: #000;
+	text-shadow: 1px 1px 0 #202020;
+}
+.caption-top {
+}
+.caption-bottom {
+}
+.caption a, .caption a {
+	border: 0 none;
+	text-decoration: none;
+	background: #000000;
+	padding: 0.3em;
+}
+.caption a:hover, .caption a:hover {
+	background: #202020;
+}
+.caption-wrapper {
+	float: left;
+}
+br.c { clear: both; }
+
+
+/*catégories*/
+.content .thumbnailCategories li, .content .thumbnailCategories li:hover {    background: none;
+}
+.wrap1 {
+	display: inline-block;
+	margin: 0 7px 5px;
+	text-align: center;
+	vertical-align: top;
+}
+#content .thumbnailCategories {
+	padding-left:auto;
+	padding-right:auto;
+	padding: 5px;
+	list-style: none outside none;
+	text-align: center;
+}
+#content .thumbnailCategories li {
+	width: auto;
+	float: none;
+	display:inline;
+	text-align:center;
+	margin-left:10px;
+}
+
+#content div.thumbnailCategory {
+	text-align:center;
+	width:100%;
+	height:100%;
+	margin: 0;
+	padding: 0;
+	vertical-align:middle;
+}
+
+#content div.thumbnailCategory div.illustration  {
+	width:auto;
+	height:auto;
+/*height:135px;*/
+	text-align:center;
+	overflow: inherit;
+	float:none;
+	margin: 0;
+	padding: 0;
+}
+#content div.thumbnailCategory div.description {
+	width:auto;
+	height:auto;
+	text-align:center;
+	overflow:inherit;
+    float:none;
+    overflow: auto;
+
+}
+/* --------------Hack-------------*/
+#content div.thumbnailCategory {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	width:160px;
+	height:205px;
+}
+#content div.thumbnailCategory * {
+	vertical-align: middle;
+}
+/*\*//*/
+.wraptocenter {
+    display: block;
+}
+.wraptocenter span {
+    display: inline-block;
+    height: 100%;
+    width: 1px;
+}
+/**/
+/* --------------fin Hack-------------*/
+
+#content div.thumbnailCategory div.description h3 {
+text-align:center;
+}

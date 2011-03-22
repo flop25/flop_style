@@ -1,0 +1,23 @@
+Nouveauté de piwigo 2.x, la gestion d'extensions de template est facilitée : flop_style est un "Template (modèle)" ou "template-extension" et permet donc de modifier une petite partie de votre galerie telle que les catégories ou les miniatures
+
+Que contient flop_style ?
+
+flop_style contient 9 templates :
+flop_style/mainpage_categories/captify_mini.tpl 			
+flop_style/mainpage_categories/jPolaroid.tpl 			
+flop_style/mainpage_categories/medium_cat.tpl 			
+flop_style/mainpage_categories/mosaic.tpl 			
+flop_style/mainpage_categories/picpile_cat.tpl 			
+flop_style/mainpage_categories/polaroid.tpl 			
+flop_style/thumbnails/fancy_hover.tpl 			
+flop_style/thumbnails/jPolaroid.tpl 			
+flop_style/thumbnails/polaroid.tpl
+
+Comment faire ?
+
+-télécharger l'archive, puis placer le dossier flop_style et son contenu dans le dossier template-extension/ de votre galerie
+-aller, dans l'administration en ligne de votre galerie, dans Configuration->Templates (modèles) ou admin.php?page=extend_for_templates plus directement
+-dans "Templates d'origine" mettez le nom du sous-dossier du template de flop_style (ex: pour flop_style/thumbnails/polaroid.tpl mettez thumbnails.tpl)
+-les 2autres paramètres sont facultatifs : laissez les vides pour que le Template s'applique partout et pour tous les thèmes
+
+Regardez la miniature de cette page pour vous donner une idée de qui fait quoi !

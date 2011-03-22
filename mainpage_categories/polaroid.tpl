@@ -3,7 +3,7 @@
 <ul class="polaroids">
 {foreach from=$category_thumbnails item=cat}
   <li>
-			<a href="{$cat.URL}" title="{$cat.NAME|truncate:38:" [...]"|@replace:'"':' '}">
+			<a href="{$cat.URL}" title="{$cat.NAME|truncate:20:" [...]"|@replace:'"':' '}">
 				<img src="{$cat.TN_SRC}"  alt="{$cat.TN_ALT}" title="{$cat.NAME|@replace:'"':' '} - {'display this album'|@translate}" >
 			</a>
 	</li>

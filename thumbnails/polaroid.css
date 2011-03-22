@@ -1,9 +1,13 @@
 /* from http://www.zurb.com/playground/css3-polaroids thx ! */
 .content {
 	display:block;
-    position: relative;
-    z-index: 1;}
-ul.polaroids {
+	position: relative;
+	z-index: 1;
+}
+.navigationBar {
+	clear:both;
+}
+ul.thumbnails {
 	list-style: none;
 	overflow: visible;
 	width: 100%;
@@ -13,63 +17,85 @@ ul.polaroids {
 	padding-left: 0;
 	margin: 0px;
 }
-ul.polaroids li {
-    display: inline;
+ul.thumbnails li {
+	display: inline;
 }
-ul.polaroids a {
-    -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
-    -moz-transform: rotate(-2deg);
-    background: none repeat scroll 0 0 #FFFFFF;
-    color: #333333;
-    display: inline;
-    float: left;
-    font-family: "Marker Felt",sans-serif;
-    font-size: 18px;
-    margin: 0 0 27px 30px;
-    padding: 10px 10px 15px;
-    text-align: center;
-    text-decoration: none;
-    width: auto;
+ul.thumbnails a {
+	-moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+	-moz-transform: rotate(-2deg);
+	-webkit-transition: -webkit-transform .15s linear;
+	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	-webkit-transform: rotate(-2deg);
+	-o-transition: -webkit-transform .15s linear;
+	-o-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	-o-transform:rotate(-2deg);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 1px 1px #CCC;
+	background: none repeat scroll 0 0 #FFFFFF;
+	color: #333333;
+	display: inline;
+	float: left;
+	font-family: "Marker Felt", sans-serif;
+	font-size: 18px;
+	margin: 0 0 27px 30px;
+	padding: 10px 10px 15px;
+	text-align: center;
+	text-decoration: none;
+	width: auto;
+	overflow:hidden;
+	border:none;
 }
-ul.polaroids img {
-    display: block;
-    margin-bottom: 12px;
-    width: 190px;
+ul.thumbnails img {
+	display: block;
+	margin-bottom: 12px;
+	width: 118px;
 }
-ul.polaroids a:after {
-    content: attr(title);
+ul.thumbnails a:after {
+	content: attr(title);
 }
-ul.polaroids li:nth-child(2n) a {
-    -moz-transform: rotate(2deg);
+ul.thumbnails li:nth-child(2n) a {
+	-moz-transform: rotate(2deg);
+	-webkit-transform: rotate(2deg);
+	-o-transform:rotate(2deg);
 }
-ul.polaroids li:nth-child(3n) a {
-    -moz-transform: none;
-    position: relative;
-    top: -5px;
+ul.thumbnails li:nth-child(3n) a {
+	-moz-transform: none;
+	-webkit-transform: none;
+	-o-transform:none;
+	position: relative;
+	top: -5px;
 }
-ul.polaroids li:nth-child(5n) a {
-    -moz-transform: rotate(5deg);
-    position: relative;
-    right: 5px;
+ul.thumbnails li:nth-child(5n) a {
+	-moz-transform: rotate(5deg);
+	-webkit-transform: rotate(5deg);
+	-o-transform: rotate(5deg);
+	position: relative;
+	right: 5px;
 }
-ul.polaroids li:nth-child(8n) a {
-    position: relative;
-    right: 5px;
-    top: 8px;
+ul.thumbnails li:nth-child(8n) a {
+	position: relative;
+	right: 5px;
+	top: 8px;
 }
-ul.polaroids li:nth-child(11n) a {
-    left: -5px;
-    position: relative;
-    top: 3px;
+ul.thumbnails li:nth-child(11n) a {
+	left: -5px;
+	position: relative;
+	top: 3px;
 }
-ul.polaroids li.messy a {
-    -moz-transform: rotate(-5deg);
-    margin-left: 160px;
-    margin-top: -375px;
+ul.thumbnails li.messy a {
+	-moz-transform: rotate(-5deg);
+	-webkit-transform: rotate(-5deg);
+	-o-transform: rotate(-5deg);
+	margin-left: 160px;
+	margin-top: -375px;
 }
-ul.polaroids li a:hover {
-    -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-    -moz-transform: scale(1.25);
-    position: relative;
-    z-index: 5;
+ul.thumbnails li a:hover {
+	-moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+	-moz-transform: scale(1.25);
+	-webkit-transform: scale(1.25);
+	-o-transform:  scale(1.25);
+	position: relative;
+	z-index: 5;
+	border:none;
 }

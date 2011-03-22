@@ -6,7 +6,7 @@
 }
 ul.polaroids {
 	list-style: none;
-	overflow: visible;
+	overflow: hidden;
 	width: 100%;
 	padding-top: 20px;
 	padding-right: 0;

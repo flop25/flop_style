@@ -1,7 +1,7 @@
 /* from http://steveram.info/jpolaroid/ thx ! */
 ul.thumbnails {
 	list-style: none;
-	overflow: visible;
+	overflow: hidden;
 	width: 100%;
 	padding-top: 20px;
 	padding-right: 0;
@@ -19,7 +19,4 @@ ul.thumbnails a {
 	text-decoration: none;
 	width: auto;
 	border:none;
-}
-.navigationBar {
-	clear:both;
 }

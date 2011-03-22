@@ -28,5 +28,5 @@
     </a>
     <div class="mosaic-backdrop"> <img src="{$cat.TN_SRC}" alt="{$cat.TN_ALT}" title="{$cat.NAME|@replace:'"':' '} - {'display this album'|@translate}"> </div>
   </div>
-  {/foreach} <br style="clear:both">
+  {/foreach}
 </div>

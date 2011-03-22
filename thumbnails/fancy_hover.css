@@ -2,7 +2,8 @@
 ul.thumbnails {
 	list-style: none;
 	margin: 0;
-	padding: 10px;
+	overflow: hidden;
+	padding: 50px;
 }
 ul.thumbnails li {
 	margin: 0;
@@ -26,7 +27,4 @@ ul.thumbnails li img {
 ul.thumbnails li img.hover {
 	background:url(thumb_bg.png) no-repeat center center;  /* Image used as background on hover effect*/
 	border: none; /* Get rid of border on hover */
-}
-.navigationBar {
-	clear:both;
 }

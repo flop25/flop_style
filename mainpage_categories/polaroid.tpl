@@ -9,4 +9,3 @@
 	</li>
 {/foreach}
 </ul>
-<br style="clear:both" />

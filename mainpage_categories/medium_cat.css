@@ -18,6 +18,7 @@
 }
 #content .thumbnailCategories li:hover {
 	background-image:none;
+	background-color:transparent;
 }
 #content div.thumbnailCategory div.illustration {
 	width:auto;
@@ -38,6 +39,13 @@
 	float:none;
 	overflow: auto;
 	background-image:none;
+	padding-left:0;
+	padding-right:0;
+	height:auto;
+}
+#content .thumbnailCategory div.illustration a {
+	padding-left: 0;
+	padding-right: 0;
 }
 .description img {
 	float:right;
@@ -52,7 +60,7 @@
 	padding:5px;
 	vertical-align: middle;
 	width:160px;
-	height:205px;
+	height:180px;
 	text-align: center;
 	background-image:none;
 }

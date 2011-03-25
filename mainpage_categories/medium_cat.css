@@ -53,7 +53,6 @@
 #content div.thumbnailCategory div.description p {
 	text-align: center;
 }
-/* --------------Hack-------------*/
 #content div.thumbnailCategory {
 	display: inline-block;
 	margin: 5px auto;
@@ -67,17 +66,6 @@
 #content div.thumbnailCategory * {
 	vertical-align: middle;
 }
-/*\*//*/
-#content div.thumbnailCategory {
-    display: block;
-}
-#content div.thumbnailCategory span {
-    display: inline-block;
-    height: 100%;
-    width: 1px;
-}
-/**/
-/* --------------fin Hack-------------*/
 
 #content div.thumbnailCategory div.description h3 {
 	text-align:center;

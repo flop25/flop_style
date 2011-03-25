@@ -81,7 +81,6 @@ br.c { clear: both; }
     overflow: auto;
 
 }
-/* --------------Hack-------------*/
 #content div.thumbnailCategory {
 	display: table-cell;
 	text-align: center;
@@ -92,17 +91,6 @@ br.c { clear: both; }
 #content div.thumbnailCategory * {
 	vertical-align: middle;
 }
-/*\*//*/
-.wraptocenter {
-    display: block;
-}
-.wraptocenter span {
-    display: inline-block;
-    height: 100%;
-    width: 1px;
-}
-/**/
-/* --------------fin Hack-------------*/
 
 #content div.thumbnailCategory div.description h3 {
 text-align:center;

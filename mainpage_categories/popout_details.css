@@ -1,0 +1,70 @@
+/*--Column Styles--*/
+.content {
+	overflow:visible;
+}
+ul.columns {
+	width: 960px;
+	list-style: none;
+	margin: 0 auto;
+	padding: 0;
+}
+ul.columns li {
+	width: 220px;
+	float: left;
+	display: inline;
+	margin: 10px;
+	padding: 0;
+	position: relative;
+}
+ul.columns li:hover {
+	z-index: 99;
+}
+/*--Thumbnail Styles--*/
+ul.columns li img {
+	position: relative;
+	filter: alpha(opacity=30);
+	opacity: 0.3;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"; /*--IE8 Specific--*/
+}
+ul.columns li:hover img {
+	z-index: 99;
+	filter: alpha(opacity=100);
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+/*--Details Style--*/
+ul.columns li .info {
+	position: absolute;
+	left: -10px;
+	top: -10px;
+	padding: 210px 10px 20px;
+	width: 220px;
+  overflow: hidden;
+	display: none;
+	background: #fff;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color:#000;
+}
+ul.columns li:hover .info {
+	display: block;
+}
+ul.columns li .info a {
+	color:#000;
+}
+ul.columns li .info a:hover {
+	color:#333;
+}
+ul.columns li h6 {
+	font-size: 1.2em;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 10px 0;
+}
+ul.columns li p {
+	padding: 0;
+	margin: 0;
+	font-size: 0.9em;
+}

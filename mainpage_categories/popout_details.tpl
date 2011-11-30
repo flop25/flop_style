@@ -4,13 +4,13 @@
 var max_dim_width = 0;
 var max_dim_height = 0;
 jQuery(window).load(function() {
-  $(".columns img").each(function () {
+  $(".columns a img").each(function () {
     if (jQuery(this).height() > max_dim_height)
       max_dim_height = jQuery(this).height() + 10;
     if (jQuery(this).width() > max_dim_width)
       max_dim_width = jQuery(this).width() + 10;
 
-    jQuery(".columns img")
+    jQuery(".columns a img")
       .css('width', max_dim_width+'px')
       .css('height', max_dim_height+'px');
     jQuery(".columns li, .columns .info")

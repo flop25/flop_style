@@ -52,7 +52,7 @@ var max_dim_height = 0;
 <div id="items">
 {foreach from=$category_thumbnails item=cat}
 			<a href="{$cat.URL}" class="item" title="{$cat.NAME|@replace:'"':' '}{if not empty($cat.DESCRIPTION)} - {$cat.DESCRIPTION|@replace:'"':' '}{/if}">
-				<img src="{$cat.TN_SRC}" alt="{$cat.TN_ALT}" >
+				<img src="{$pwg->derivative_url($derivative_params, $cat.representative.src_image)}" alt="{$cat.TN_ALT}" >
 			</a>
 {/foreach}
 </div>

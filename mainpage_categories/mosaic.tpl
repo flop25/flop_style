@@ -12,6 +12,14 @@
 </script> 
 {/literal}
 {/html_head}
+{html_style}{literal}
+.mosaic-block, .mosaic-backdrop img  {
+	width:{/literal}{$derivative_params->max_width()}{literal}px;
+	height:{/literal}{$derivative_params->max_height()}{literal}px;
+}
+{/literal}{/html_style}
+
+{define_derivative name='derivative_mosaic' width=$derivative_params->max_width() height=$derivative_params->max_height() crop=true}
 <div id="mosaic-content"> {foreach from=$category_thumbnails item=cat}
   <div class="mosaic-block bar"> <a href="{$cat.URL}" class="mosaic-overlay">
     <div class="details">
@@ -26,7 +34,7 @@
         {/if} </p>
     </div>
     </a>
-    <div class="mosaic-backdrop"> <img src="{$cat.TN_SRC}" alt="{$cat.TN_ALT}" title="{$cat.NAME|@replace:'"':' '} - {'display this album'|@translate}"> </div>
+    <div class="mosaic-backdrop"> <img src="{$pwg->derivative_url($derivative_mosaic, $cat.representative.src_image)}" alt="{$cat.TN_ALT}" title="{$cat.NAME|@replace:'"':' '} - {'display this album'|@translate}"> </div>
   </div>
   {/foreach}
 </div>

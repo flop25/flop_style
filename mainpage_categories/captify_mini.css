@@ -34,14 +34,14 @@ br.c { clear: both; }
 }
 .wrap1 {
 	display: inline-block;
-	margin: 0 7px 5px;
-	text-align: center;
+  margin: 8px 4px;
+  text-align: center;
 	vertical-align: top;
 }
 #content .thumbnailCategories {
 	padding-left:auto;
 	padding-right:auto;
-	padding: 5px;
+	margin-top: 5px;
 	list-style: none outside none;
 	text-align: center;
 }
@@ -50,7 +50,6 @@ br.c { clear: both; }
 	float: none;
 	display:inline;
 	text-align:center;
-	margin-left:10px;
 }
 
 #content div.thumbnailCategory {

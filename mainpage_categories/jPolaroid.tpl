@@ -19,12 +19,21 @@ $(document).ready(function(){
 </script>
   {/literal}
 {/html_head}
+{assign var=crop value=$derivative_params->sizing->max_crop}
+{if $crop==1}
+{assign var=crop value=true}
+{assign var=width value=$derivative_params->max_width()}
+{else}
+{assign var=crop value=false}
+{assign var=width value=99999}
+{/if}
+{define_derivative name='derivative_jPolaroid' width=$width height=$derivative_params->max_height() crop=$crop}
 
 <ul class="jpolaroid">
 {foreach from=$category_thumbnails item=cat}
   <li>
 			<a href="{$cat.URL}" title="{$cat.NAME|@replace:'"':' '}">
-				<img src="{$cat.TN_SRC}"  alt="{$cat.TN_ALT}" title="{$cat.NAME|@replace:'"':' '} - {'display this album'|@translate}" >
+				<img src="{$pwg->derivative_url($derivative_jPolaroid, $cat.representative.src_image)}"  alt="{$cat.TN_ALT}" title="{$cat.NAME|@replace:'"':' '} - {'display this album'|@translate}" >
 			</a>
 	</li>
 {/foreach}

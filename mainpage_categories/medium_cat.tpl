@@ -1,4 +1,13 @@
 {combine_css path="template-extension/flop_style/mainpage_categories/medium_cat.css"}
+{html_style}{literal}
+.thumbnailCategory .illustration {
+	width:{/literal}{$derivative_params->max_width()+5}{literal}px;
+}
+
+.thumbnailCategory .description {
+	height:5em;
+}
+{/literal}{/html_style}
 
 <ul class="thumbnailCategories">
 {foreach from=$category_thumbnails item=cat}
@@ -6,7 +15,7 @@
 		<div class="thumbnailCategory">
 			<div class="illustration">
 			<a href="{$cat.URL}">
-				<img src="{$cat.TN_SRC}" alt="{$cat.TN_ALT}" title="{$cat.NAME|@replace:'"':' '} - {'display this album'|@translate}">
+				<img src="{$pwg->derivative_url($derivative_params, $cat.representative.src_image)}" alt="{$cat.TN_ALT}" title="{$cat.NAME|@replace:'"':' '} - {'display this album'|@translate}">
 			</a>
 			</div>
 			<div class="description">

@@ -21,9 +21,6 @@
 	background-color:transparent;
 }
 #content div.thumbnailCategory div.illustration {
-	width:auto;
-	height:auto;
-	/*height:135px;*/
 	text-align:center;
 	overflow: inherit;
 	float:none;
@@ -33,7 +30,6 @@
 }
 #content div.thumbnailCategory div.description {
 	width:auto;
-	height:auto;
 	text-align:center;
 	overflow:inherit;
 	float:none;
@@ -41,7 +37,6 @@
 	background-image:none;
 	padding-left:0;
 	padding-right:0;
-	height:auto;
 }
 #content .thumbnailCategory div.illustration a {
 	padding-left: 0;
@@ -65,13 +60,13 @@
   border-style: solid;
   border-width: 2px;
 }
+#content div.thumbnailCategory:hover {
+  border-color: #777777 #CCCCCC #CCCCCC #777777;
+}
 #content div.thumbnailCategory * {
 	vertical-align: middle;
 }
 
 #content div.thumbnailCategory div.description h3 {
 	text-align:center;
-}
-#content div.thumbnailCategory div.illustration img {
-	height: 96px;
 }

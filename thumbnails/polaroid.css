@@ -45,7 +45,6 @@ ul.thumbnails a {
 ul.thumbnails img {
 	display: block;
 	margin-bottom: 12px;
-	width: 118px;
 }
 ul.thumbnails a:after {
 	content: attr(title);
@@ -87,6 +86,7 @@ ul.thumbnails li.messy a {
 	margin-top: -375px;
 }
 ul.thumbnails li a:hover {
+	box-shadow: 6px 6px 8px  rgba(0, 0, 0, 0.85);
 	-moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
 	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
 	-moz-transform: scale(1.25);

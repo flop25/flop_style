@@ -6,7 +6,7 @@
 }
 ul.polaroids {
 	list-style: none;
-	overflow: hidden;
+	overflow: visible;
 	width: 100%;
 	padding-top: 20px;
 	padding-right: 0;
@@ -15,18 +15,18 @@ ul.polaroids {
 	margin: 0px;
 }
 ul.polaroids li {
-	display: inline;
+	display: inline-block;
 }
 ul.polaroids a {
-	-moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.85);
 	-moz-transform: rotate(-2deg);
 	-webkit-transition: -webkit-transform .15s linear;
-	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.85);
 	-webkit-transform: rotate(-2deg);
 	-o-transition: -webkit-transform .15s linear;
-	-o-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	-o-box-shadow: 0 3px 6px rgba(0,0,0,.85);
 	-o-transform:rotate(-2deg);
-	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.85);
   text-shadow: 0 1px 1px #CCC;
 	background: none repeat scroll 0 0 #FFFFFF;
 	color: #333333;
@@ -35,7 +35,7 @@ ul.polaroids a {
 	font-family: "Marker Felt", sans-serif;
 	font-size: 18px;
 	margin: 0 0 27px 30px;
-	padding: 10px 10px 15px;
+	padding: 8px 8px 10px;
 	text-align: center;
 	text-decoration: none;
 	width: auto;
@@ -86,8 +86,9 @@ ul.polaroids li.messy a {
 	margin-top: -375px;
 }
 ul.polaroids li a:hover {
-	-moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-	-webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+	box-shadow: 6px 6px 8px  rgba(0, 0, 0, 0.85);
+	-moz-box-shadow:  6px 6px 8px  rgba(0, 0, 0, 0.85);
+	-webkit-box-shadow: 6px 6px 8px rgba(0,0,0, 0.85);
 	-moz-transform: scale(1.25);
 	-webkit-transform: scale(1.25);
 	-o-transform:  scale(1.25);

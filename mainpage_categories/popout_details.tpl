@@ -26,7 +26,7 @@ jQuery(window).load(function() {
 {foreach from=$category_thumbnails item=cat}
   <li>
       <a href="{$cat.URL}">
-        <img src="{$cat.TN_SRC}" alt="{$cat.TN_ALT}" title="{$cat.NAME|@replace:'"':' '} - {'display this album'|@translate}">
+        <img src="{$pwg->derivative_url($derivative_params, $cat.representative.src_image)}" alt="{$cat.TN_ALT}" title="{$cat.NAME|@replace:'"':' '} - {'display this album'|@translate}">
       </a>
       <div class="info">
         <h6>

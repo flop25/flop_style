@@ -22,7 +22,7 @@ ul.columns li:hover {
 ul.columns li img {
 	position: relative;
 	filter: alpha(opacity=30);
-	opacity: 0.3;
+	opacity: 0.75;
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"; /*--IE8 Specific--*/
 }
 ul.columns li:hover img {

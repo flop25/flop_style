@@ -8,8 +8,6 @@
 .mosaic-block {
 	position:relative;
 	overflow:hidden;
-	width:400px;
-	height:250px;
 	margin:10px;
 	background:#111 url(progress.gif) no-repeat center center;
 	border:1px solid #fff;
@@ -61,8 +59,4 @@
 }
 .mosaic-block a {
 	text-decoration:none;
-}
-.mosaic-backdrop img {
-	width:400px;
-	height:250px;
 }

@@ -30,12 +30,21 @@ $(function(){
 </script>
   {/literal}
 {/html_head}
+{assign var=crop value=$derivative_params->sizing->max_crop}
+{if $crop==1}
+{assign var=crop value=true}
+{assign var=width value=$derivative_params->max_width()}
+{else}
+{assign var=crop value=false}
+{assign var=width value=99999}
+{/if}
+{define_derivative name='derivative_captify_mini' width=$width height=$derivative_params->max_height() crop=$crop}
 
 <ul class="thumbnailCategories">
 {foreach from=$category_thumbnails item=cat}
   <li class="{cycle values="cat_1,cat_2,cat_3,cat_4"}" >
 			<span class="wrap1"><a href="{$cat.URL}">
-				<img src="{$cat.TN_SRC}" class="captify" alt="{$cat.NAME|truncate:38:" [...]"}" title="{$cat.NAME|@replace:'"':' '} - {'display this album'|@translate}" >
+				<img src="{$pwg->derivative_url($derivative_captify_mini, $cat.representative.src_image)}" class="captify" alt="{$cat.NAME|truncate:38:" [...]"}" title="{$cat.NAME|@replace:'"':' '} - {'display this album'|@translate}" >
 			</a></span>
 	</li>
 {/foreach}

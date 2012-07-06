@@ -4,8 +4,8 @@
 	width:{/literal}{$derivative_params->max_width()+5}{literal}px;
 }
 
-.thumbnailCategory .description {
-	height:5em;
+.thumbnailCategory {
+	height:{/literal}{$derivative_params->max_width()+50}{literal}px;
 }
 {/literal}{/html_style}
 

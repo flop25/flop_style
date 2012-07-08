@@ -5,7 +5,9 @@
 }
 
 .thumbnailCategory {
-	height:{/literal}{$derivative_params->max_width()+50}{literal}px;
+	height:{/literal}{$derivative_params->max_width()+60}{literal}px;
+	width:{/literal}{$derivative_params->max_width()+10}{literal}px;
+  overflow:hidden;
 }
 {/literal}{/html_style}
 

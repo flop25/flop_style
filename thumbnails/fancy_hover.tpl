@@ -1,10 +1,12 @@
 {combine_css path="template-extension/flop_style/thumbnails/fancy_hover.css"}
 {combine_script id='jquery' path='themes/default/js/jquery.min.js'}
+{combine_script id='jquery.ajaxmanager' path='themes/default/js/plugins/jquery.ajaxmanager.js' load='footer'}
+{combine_script id='thumbnails.loader' path='themes/default/js/thumbnails.loader.js' require='jquery.ajaxmanager' load='footer'}
 {define_derivative name='derivative_fh' width=$derivative_params->max_width() height=$derivative_params->max_height() crop=true}
 {html_head}
   {literal}
 <script type="text/javascript">
-$(document).ready(function(){ 
+jQuery(document).ready(function(){ 
 $("ul.thumbnails li").hover(function() {
 	$(this).css({'z-index' : '10'}); /*Add a higher z-index value so this image stays on top*/ 
 	$(this).find('img').addClass("hover").stop() /* Add class of "hover", then stop animation queue buildup*/
@@ -49,9 +51,10 @@ ul.thumbnails li
 {/literal}{/html_style}
 {if !empty($thumbnails)}
 {strip}{foreach from=$thumbnails item=thumbnail}
+{assign var=derivative value=$pwg->derivative($derivative_fh, $thumbnail.src_image)}
 	<li>
     <a href="{$thumbnail.URL}" title="{if isset($thumbnail.NAME)}{$thumbnail.NAME|truncate:11:" [...]"|@replace:'"':' '}{/if}">
-      <img src="{$pwg->derivative_url($derivative_fh, $thumbnail.src_image)}" class="thumb_jpolaroid" alt="{$thumbnail.TN_ALT}" title="{$thumbnail.TN_TITLE}" >
+      <img {if $derivative->is_cached()}src="{$derivative->get_url()}"{else}src="{$ROOT_URL}{$themeconf.img_dir}/ajax-loader-big.gif" data-src="{$derivative->get_url()}"{/if} class="thumb_jpolaroid" alt="{$thumbnail.TN_ALT}" title="{$thumbnail.TN_TITLE}" >
     </a>
 	</li>
 {/foreach}{/strip}

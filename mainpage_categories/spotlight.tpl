@@ -1,58 +1,49 @@
 {combine_css path="template-extension/flop_style/mainpage_categories/spotlight.css"}
+{combine_script id='jquery.ajaxmanager' path='themes/default/js/plugins/jquery.ajaxmanager.js' load='footer'}
+{combine_script id='thumbnails.loader' path='themes/default/js/thumbnails.loader.js' require='jquery.ajaxmanager' load='footer'}
 {footer_script require='jquery'}{literal}
-$(document).ready(function () {
+jQuery(document).ready(function () {
  
     //loop through all the children in #items
     //save title value to a span and then remove the value of the title to avoid tooltips
-    $('#items .item').each(function () {
-        title = $(this).attr('title');
-        $(this).append('<span class="caption">' + title + '</span>');   
-        $(this).attr('title','');
+    jQuery('#items .item').each(function () {
+        title = jQuery(this).attr('title');
+        jQuery(this).append('<span class="caption">' + title + '</span>');   
+        jQuery(this).attr('title','');
     });
  
-    $('#items .item').hover(
+    jQuery('#items .item').hover(
         function () {
             //set the opacity of all siblings
-            $(this).siblings().css({'opacity': '0.1'}); 
+            jQuery(this).siblings().css({'opacity': '0.1'}); 
              
             //set the opacity of current item to full, and add the effect class
-            $(this).css({'opacity': '1.0'}).addClass('effect');
+            jQuery(this).css({'opacity': '1.0'}).addClass('effect');
              
             //show the caption
-            $(this).children('.caption').show();    
+            jQuery(this).children('.caption').show();    
         },
         function () {
             //hide the caption
-            $(this).children('.caption').hide();        
+            jQuery(this).children('.caption').hide();        
         }
     );
      
-    $('#items').mouseleave(function () {
+    jQuery('#items').mouseleave(function () {
         //reset all the opacity to full and remove effect class
-        $(this).children().fadeTo('100', '1.0').removeClass('effect');      
+        jQuery(this).children().fadeTo('100', '1.0').removeClass('effect');      
     });
      
 });
-$(document).ready(function() {
-var max_dim_width = 0;
-var max_dim_height = 0;
-  $(".item img").each(function () {
-    if (jQuery(this).height() > max_dim_height)
-      max_dim_height = jQuery(this).height() + 10;
-    if (jQuery(this).width() > max_dim_width)
-      max_dim_width = jQuery(this).width() + 10;
-
-    jQuery(".item, .item img")
-      .css('width', max_dim_width+'px')
-      .css('height', max_dim_height+'px');
-  });
-});
 
 {/literal}{/footer_script}
+{define_derivative name='spotlight' width=$derivative_params->max_width() height=$derivative_params->max_height() crop=true}
+
 <div id="items">
 {foreach from=$category_thumbnails item=cat}
-			<a href="{$cat.URL}" class="item" title="{$cat.NAME|@replace:'"':' '}{if not empty($cat.DESCRIPTION)} - {$cat.DESCRIPTION|@replace:'"':' '}{/if}">
-				<img src="{$pwg->derivative_url($derivative_params, $cat.representative.src_image)}" alt="{$cat.TN_ALT}" >
-			</a>
+{assign var=derivative value=$pwg->derivative($spotlight, $cat.representative.src_image)}
+  <a href="{$cat.URL}" class="item" title="{$cat.NAME|@replace:'"':' '}{if not empty($cat.DESCRIPTION)} - {$cat.DESCRIPTION|@replace:'"':' '}{/if}" style="{assign var=sz value=$derivative->get_size()}width:{$sz[0]}px;height:{$sz[1]}px">
+    <img {if $derivative->is_cached()}src="{$derivative->get_url()}"{else}src="{$ROOT_URL}{$themeconf.img_dir}/ajax-loader-big.gif" data-src="{$derivative->get_url()}"{/if} alt="{$cat.TN_ALT}" {$derivative->get_size_htm()}>
+  </a>
 {/foreach}
 </div>

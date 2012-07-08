@@ -1,10 +1,12 @@
 {combine_css path="template-extension/flop_style/mainpage_categories/popout_details.css"}
+{combine_script id='jquery.ajaxmanager' path='themes/default/js/plugins/jquery.ajaxmanager.js' load='footer'}
+{combine_script id='thumbnails.loader' path='themes/default/js/thumbnails.loader.js' require='jquery.ajaxmanager' load='footer'}
 {footer_script require='jquery'}
 {literal} 
 var max_dim_width = 0;
 var max_dim_height = 0;
 jQuery(window).load(function() {
-  $(".columns a img").each(function () {
+  jQuery(".columns a img").each(function () {
     if (jQuery(this).height() > max_dim_height)
       max_dim_height = jQuery(this).height() + 10;
     if (jQuery(this).width() > max_dim_width)
@@ -24,9 +26,10 @@ jQuery(window).load(function() {
 {/footer_script}
 <ul class="columns">
 {foreach from=$category_thumbnails item=cat}
+{assign var=derivative value=$pwg->derivative($derivative_params, $cat.representative.src_image)}
   <li>
       <a href="{$cat.URL}">
-        <img src="{$pwg->derivative_url($derivative_params, $cat.representative.src_image)}" alt="{$cat.TN_ALT}" title="{$cat.NAME|@replace:'"':' '} - {'display this album'|@translate}">
+        <img {if $derivative->is_cached()}src="{$derivative->get_url()}"{else}src="{$ROOT_URL}{$themeconf.img_dir}/ajax-loader-big.gif" data-src="{$derivative->get_url()}"{/if} alt="{$cat.TN_ALT}" title="{$cat.NAME|@replace:'"':' '} - {'display this album'|@translate}">
       </a>
       <div class="info">
         <h6>

@@ -1,6 +1,8 @@
 {combine_css path="template-extension/flop_style/mainpage_categories/mosaic/mosaic.css"}
 {combine_css path="template-extension/flop_style/mainpage_categories/mosaic.css"}
 {combine_script id="jquery.mosaic" load="header" path="template-extension/flop_style/mainpage_categories/mosaic/mosaic.1.0.1.min.js"}
+{combine_script id='jquery.ajaxmanager' path='themes/default/js/plugins/jquery.ajaxmanager.js' load='footer'}
+{combine_script id='thumbnails.loader' path='themes/default/js/thumbnails.loader.js' require='jquery.ajaxmanager' load='footer'}
 {html_head}
   {literal} 
 <script type="text/javascript">
@@ -21,6 +23,7 @@
 
 {define_derivative name='derivative_mosaic' width=$derivative_params->max_width() height=$derivative_params->max_height() crop=true}
 <div id="mosaic-content"> {foreach from=$category_thumbnails item=cat}
+{assign var=derivative value=$pwg->derivative($derivative_mosaic, $cat.representative.src_image)}
   <div class="mosaic-block bar"> <a href="{$cat.URL}" class="mosaic-overlay">
     <div class="details">
       <h4> {$cat.NAME}
@@ -34,7 +37,7 @@
         {/if} </p>
     </div>
     </a>
-    <div class="mosaic-backdrop"> <img src="{$pwg->derivative_url($derivative_mosaic, $cat.representative.src_image)}" alt="{$cat.TN_ALT}" title="{$cat.NAME|@replace:'"':' '} - {'display this album'|@translate}"> </div>
+    <div class="mosaic-backdrop"> <img {if $derivative->is_cached()}src="{$derivative->get_url()}"{else}src="{$ROOT_URL}{$themeconf.img_dir}/ajax-loader-big.gif" data-src="{$derivative->get_url()}"{/if} alt="{$cat.TN_ALT}" title="{$cat.NAME|@replace:'"':' '} - {'display this album'|@translate}"> </div>
   </div>
   {/foreach}
 </div>
